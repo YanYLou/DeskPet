@@ -1,0 +1,9 @@
+{
+  "name": "DeskPet",
+  "version": "1.0.0",
+  "author": "YanYLou(RoseGold)",
+  "email": "yey_2022@163.com",
+  "license": "Unlicense",
+  "homepage": "https://github.com/YanYLou/DeskPet",
+  "description": "一个基于 PySide6 的桌面宠物程序"
+}
