@@ -2,8 +2,6 @@
 
 一个基于 PySide6 的桌面宠物应用。透明无边框窗口，支持 PNG 序列帧 / GIF 动画，可拖拽、行走、换肤，打包后单文件即可运行。
 
-![preview](docs/preview.gif)
-
 ## ✨ 功能
 
 - 透明无边框窗口，始终置顶
@@ -18,13 +16,17 @@
 ## 📁 项目结构
 
 ```
-DesktopPet/
+DeskPet/
 ├── main.py                 # 入口
 ├── src/
 │   ├── pet_widget.py       # 宠物主窗口
 │   ├── config_manager.py   # 配置管理（AppData 读写）
 │   ├── skin_manager.py     # 皮肤加载 / 解压
-│   └── settings_window.py  # 设置窗口
+│   ├── tar_extractor.py    # TAR 图片包解压
+│   ├── behavior_engine.py  # 宠物行为引擎
+│   ├── behavior_manager.py # 宠物行为规则读写
+│   ├── settings_dialog.py  # 设置窗口
+│   └── main.py             # 程序入口
 ├── res/
 │   └── skins/
 │       └── default/        # 内置默认皮肤
@@ -47,7 +49,7 @@ DesktopPet/
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/<你的用户名>/DesktopPet.git
+git clone https://github.com/YanYLou/DeskPet
 cd DesktopPet
 
 # 2. 创建虚拟环境（推荐）
@@ -66,7 +68,7 @@ python main.py
 
 ```bash
 pip install pyinstaller
-pyinstaller --noconsole --onefile --add-data "res;res" --name DesktopPet main.py
+pyinstaller --noconsole --onefile --add-data "res;res" --name DeskPet .\src\main.py
 ```
 
 产物位于 `dist/DesktopPet.exe`，可直接拷贝到任意 Windows 电脑运行，无需安装 Python。
