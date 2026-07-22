@@ -1,0 +1,10 @@
+[
+  {
+    "name": "默认待机",
+    "enabled": true,
+    "trigger": "idle",
+    "trigger_value": 10,
+    "action_state": "walk",
+    "action_duration": 5
+  }
+]
